@@ -1,28 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Platform } from 'react-native';
-import { Welcome } from './src/components/Welcome';
+import { ThemeProvider } from 'styled-components';
+import AppLoading from 'expo-app-loading';
+
+import {
+  useFonts,
+  Poppins_400Regular,
+  Poppins_500Medium,
+  Poppins_700Bold,
+} from '@expo-google-fonts/poppins'
+
+
+import theme from './src/global/styles/theme';
+import { Dashboard } from './src/screens/Dashboard';
 
 export default function App() {
-  return (
-    <>
-      {Platform.OS === "ios" && <SafeAreaView />}
-      <View style={styles.container}>
-        <StatusBar style="auto" />
+  const [fontsLoaded] = useFonts({
+    Poppins_400Regular,
+    Poppins_500Medium,
+    Poppins_700Bold,
+  });
 
-        <Welcome title="Oi delícia! <3 te amo! Casa comigo!?" />
-        <Welcome title="Oi delícia! <3 te amo! Casa comigo!?" />
-        <Welcome title="Oi delícia! <3 te amo! Casa comigo!?" />
-      </View>
-    </>
+  if (!fontsLoaded) {
+    return <AppLoading />
+  }
+
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Dashboard />
+    </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
