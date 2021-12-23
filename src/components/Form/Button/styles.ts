@@ -4,6 +4,7 @@ import theme from '../../../global/styles/theme';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 
+
 export const Container = styled(TouchableOpacity) <TouchableOpacityProps>`
 width: 100%;
 background-color: ${({ theme }) => theme.colors.secondary};

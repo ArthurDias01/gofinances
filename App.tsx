@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import AppLoading from 'expo-app-loading';
+import { StatusBar } from 'react-native';
 
 import {
   useFonts,
@@ -29,7 +30,8 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <CategorySelect />
+      <StatusBar barStyle={'light-content'} backgroundColor={"#5636D3"} />
+      <Register />
     </ThemeProvider>
   );
 }
