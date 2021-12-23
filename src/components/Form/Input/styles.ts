@@ -15,6 +15,6 @@ padding-bottom: ${RFValue(6)}px;
 background-color: ${({ theme }) => theme.colors.shape};
 color: ${({ theme }) => theme.colors.text_dark};
 border-radius: 5px;
-margin-bottom: 8px;
+margin-bottom: ${RFValue(8)}px;
 
 `;
