@@ -31,7 +31,7 @@ color: ${({ theme }) => theme.colors.shape};
 
 export const Category = styled.TouchableOpacity<CategoryProps>`
 flex: 1;
-padding: ${RFValue(15)}px;
+padding: ${RFValue(14)}px;
 flex-direction: row;
 align-items: center;
 
@@ -48,6 +48,7 @@ margin-right: 16px;
 export const Name = styled.Text`
 font-family: ${({ theme }) => theme.fonts.regular};
 font-size: ${RFValue(14)}px;
+margin-top: 4px;
 `;
 
 export const Separator = styled.View`

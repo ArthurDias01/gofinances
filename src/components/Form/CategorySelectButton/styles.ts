@@ -19,6 +19,7 @@ margin-top: 16px;
 export const Category = styled.Text`
 font-family: ${({ theme }) => theme.fonts.regular};
 font-size: ${RFValue(14)}px;
+margin-top: 4px;
 `;
 export const Icon = styled(Feather)`
 font-size: ${RFValue(20)}px;
